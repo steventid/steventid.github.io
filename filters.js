@@ -24,10 +24,11 @@ function filter(type, scroll=true) {
       $(this).addClass("orient-left");
     }
     
+    //update 7/11/22 - smooth-scroll class from css already does this
     //scroll to content, include .stop(true, false) to keep animation from "sticking" once the scroll stops
-    if (scroll == true) {
-    $('html, body').stop(true, false).animate({
-      scrollTop: $("#content-start").offset().top});
-    } //end if scroll == true
+    //if (scroll == true) {
+    //$('html, body').stop(true, false).animate({
+    //  scrollTop: $("#content-start").offset().top});
+    //} //end if scroll == true
   });
 }
