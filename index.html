@@ -11,6 +11,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>  
+    <script type="text/javascript" src="filters.js"></script>
 	</head>
 	<body class="is-preload">
 
@@ -18,148 +20,174 @@
 			<div id="wrapper" class="divided">
 
 				<!-- Intro -->
-					<section class="banner style2 invert color1 orient-center content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+					<section class="banner style2 invert color1 orient-center content-align-center image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
 						<div class="content">
 							<h1>Welcome!</h1>
-							<p class="major">Thanks for taking the time to check out a timeline of some of the projects I've worked on over the past couple decades! I have organized them roughly in order of most recent to oldest, however some of the dates may not be exact, and some projects took longer from start to completion than others. If you have any questions or would like more information or source code for the projects you see here, most are available on request!</p>
-              <p class="major">I have quite a few more projects to add, some dating back to around 1999, so check back later for more content!</p>
+							<p>Thanks for taking the time to check out a timeline of some of the projects I've worked on over the past couple decades! I have organized them roughly in order of most recent to oldest, however some of the dates may not be exact, and some projects took longer from start to completion than others. If you have any questions or would like more information or source code for the projects you see here, most are available on request!</p>
+              <p>I have quite a few more projects to add, some dating back to around 1999, so check back later for more content!</p>
+              <p>Because I know your time is valuable, use these filters to quickly narrow down what you'd like to see!<br>
+                <a id="resume" class="button small">Resume Projects</a>
+                <a id="all" class="button small">All Projects</a>
+                <a id="godot" class="button small">Godot</a>
+                <a id="cpp" class="button small">C++</a>
+                <a id="vb6" class="button small">Visual Basic</a></p>
 						</div>
 						<div class="image">
-							<img src="images/st_banner.jpg" alt="" />
+							<img src="images/st_banner.jpg" />
 						</div>
 					</section>
-
-				<!-- Content Right -->
-					<section class="spotlight style1 invert color1 orient-right content-align-left image-position-left onscroll-image-fade-in" id="first">
-						<div class="content">
-							<h2>Godot Module Template Maker</h2>
-							<p>Project started approximately 4/26/2022. This project is written as a C++ console application, and its main purpose is to assist with writing the boilerplate code for custom modules for the <a href="https://godotengine.org/" target="_blank" rel="noopener noreferrer">Godot Engine</a>.</p>
+          
+        <!-- Godot Module Template Maker -->
+          <section class="spotlight godot cpp style1 invert color1 orient-right content-align-left image-position-left onscroll-image-fade-in">
+            <div class="content">
+              <h2>Godot Module Template Maker</h2>
+              <p>Project started approximately 4/26/2022. This project is written as a C++ console application, and its main purpose is to assist with writing the boilerplate code for custom modules for the <a href="https://godotengine.org" target="_blank" rel="noopener noreferrer">Godot Engine</a>.</p>
               <p>Some notable functions include checking whether or not a file or directory exists, backing up modules, and creating or deleting files from the disk.</p>
-						</div>
-						<div class="image">
-							<img src="images/st_godot_mtm.png" alt="" />
-						</div>
-					</section>
+            </div>
+            <div class="image">
+              <img src="images/st_godot_mtm.png" />
+            </div>
+          </section>
           
-        <!-- Content Left -->
-					<section class="spotlight style1 invert color1 orient-left content-align-left image-position-center onscroll-image-fade-in" id="first">
-						<div class="content">
-							<h2>Morpheus of Mars</h2>
-							<p>This project was my entry for the <a href="https://ldjam.com/" target="_blank" rel="noopener noreferrer">Ludum Dare 50</a> game jam, which ran from 4/1 to 4/4/2022. This is a real-time strategy style game which was created in 72 hours using <a href="https://godotengine.org/" target="_blank" rel="noopener noreferrer">Godot Engine</a></p>
-              <p>Some new concepts I was learning about at the time include vector field pathfinding, which helps multiple objects to pathfind to a goal faster than some other methods. You can read more about the technical specifications on Leif Erkenbrach's blog post from 2013 <a href="https://leifnode.com/2013/12/flow-field-pathfinding/" target="_blank" rel="noopener noreferrer">here</a>.</p>
-							<ul class="actions stacked">
-								<li><a href="https://rubixnoob13.itch.io/morpheus-of-mars/" target="_blank" rel="noopener noreferrer"" class="button">Play on Itch.io</a></li>
-							</ul>
-						</div>
-						<div class="image">
-							<img src="images/st_morpheus.jpg" alt="" />
-						</div>
-					</section>
+        <!-- Morpheus of Mars -->
+          <section class="spotlight resume godot style1 invert color1 orient-right content-align-left image-position-left onscroll-image-fade-in">
+            <div class="content">
+              <h2>Morpheus of Mars</h2>
+              <p>This project was my entry for the <a href="https://ldjam.com" target="_blank" rel="noopener noreferrer">Ludum Dare 50</a> game jam, which ran from 4/1 to 4/4/2022. This is a real-time strategy style game which was created in 72 hours using <a href="https://godotengine.org" target="_blank" rel="noopener noreferrer">Godot Engine</a></p>
+              <p>Some new concepts I was learning about at the time include vector field pathfinding, which helps multiple objects to pathfind to a goal faster than some other methods. You can read more about the technical specifications on Leif Erkenbrach's blog post from 2013 <a href="https://leifnode.com/2013/12/flow-field-pathfinding" target="_blank" rel="noopener noreferrer">here</a>.</p>
+              <ul class="actions">
+                <li><a href="https://rubixnoob13.itch.io/morpheus-of-mars" target="_blank" rel="noopener noreferrer" class="button">Play on Itch.io</a></li>
+                <li><a href="https://github.com/steventid/portfolio/tree/main/Godot/LD50" target="_blank" rel="noopener noreferrer" class="button">Source on Github</a></li>
+              </ul>
+            </div>
+            <div class="image">
+              <img src="images/st_morpheus.jpg" />
+            </div>
+          </section>
+
           
-        <!-- Content Right -->
-					<section class="spotlight style2 invert color1 orient-right content-align-left image-position-left onscroll-image-fade-in" id="first">
+        <!-- Blender Render Farm -->
+					<section class="spotlight resume style2 invert color1 orient-right content-align-left image-position-left onscroll-image-fade-in">
 						<div class="content">
 							<h2>Blender Render Farm</h2>
-							<p>Project started around 6/19/2021. This project involved configuring hardware and python scripts on a total of 20 nodes of <a href="https://www.hardkernel.com/shop/odroid-mc1-my-cluster-one-with-32-cpu-cores-and-8gb-dram/" target="_blank" rel="noopener noreferrer">ODROID-MC1</a> "My Cluster One" (5 units, 4 nodes each). Each unit has 32 CPU cores and 8 GB of DRAM, so the total cluster has 160 CPU cores and 40 GB DRAM. The units are mounted to a small table, underneath which is a 24 port Gig-speed switch and 2x 5V 60A Power Supply units to power the cluster.</p>
+							<p>Project started around 6/19/2021. This project involved configuring hardware and python scripts on a total of 20 nodes of <a href="https://www.hardkernel.com/shop/odroid-mc1-my-cluster-one-with-32-cpu-cores-and-8gb-dram" target="_blank" rel="noopener noreferrer">Odroid-MC1</a> "My Cluster One" (5 units, 4 nodes each). Each unit has 32 CPU cores and 8 GB of DRAM, so the total cluster has 160 CPU cores and 40 GB DRAM. The units are mounted to a small table, underneath which is a 24 port Gig-speed switch and 2x 5V 60A Power Supply units to power the cluster.</p>
               <p>The node configuration was done via ssh and Linux terminal commands, as the nodes do not include any display output port, only a UART connection for debugging purposes. I later also added a Raspberry Pi Zero-W to control 2 LED panels to display status messages (not pictured).</p>
               <p>The purpose of the cluster, known as the "Tiny Potato Collective" due to being both physically small and not super powerful, is to offload the work of rendering 3D images created with <a href="https://blender.org" target="_blank" rel="noopener noreferrer">Blender</a> from my main PC. Rendering images and animations can take a long time, so this way I'm free to work on other things while the cluster works in the background.</p>
               <p>The Python script runs on another machine and delegates the next frame to be rendered to the next available machine so that the load is balanced as evenly as possible across all nodes for maximum efficiency.</p>
+              <ul class="actions">
+                <li><a href="https://github.com/steventid/portfolio/blob/main/Python/render_farm.py" target="_blank" rel="noopener noreferrer" class="button">Source on Github</a></li>
+              </ul>
 						</div>
 						<div class="image">
-							<img src="images/st_tiny_potatoes.jpg" alt="" />
+							<img src="images/st_tiny_potatoes.jpg" />
 						</div>
 					</section>
           
-        <!-- Content Left -->
-					<section class="spotlight style1 invert color1 orient-left content-align-left image-position-center onscroll-image-fade-in" id="first">
+        <!-- Electro-Twixt -->
+					<section class="spotlight godot style1 invert color1 orient-right content-align-left image-position-center onscroll-image-fade-in">
 						<div class="content">
 							<h2>Electro-Twixt</h2>
-							<p>This project was my entry for the <a href="https://ldjam.com/" target="_blank" rel="noopener noreferrer">Ludum Dare 49</a> game jam, which happened in October 2021. This is a top down action game created in 72 hours by myself and my girlfriend in which you remove ghosts from haunted houses. Made with <a href="https://godotengine.org/" target="_blank" rel="noopener noreferrer">Godot Engine</a></p>
-              <ul class="actions stacked">
-								<li><a href="https://rubixnoob13.itch.io/electro-twixt/" target="_blank" rel="noopener noreferrer"" class="button">Play on Itch.io</a></li>
+							<p>This project was my entry for the <a href="https://ldjam.com" target="_blank" rel="noopener noreferrer">Ludum Dare 49</a> game jam, which happened in October 2021. This is a top down action game created in 72 hours by myself and my girlfriend in which you remove ghosts from haunted houses. Made with <a href="https://godotengine.org" target="_blank" rel="noopener noreferrer">Godot Engine</a></p>
+              <ul class="actions">
+								<li><a href="https://rubixnoob13.itch.io/electro-twixt" target="_blank" rel="noopener noreferrer" class="button">Play on Itch.io</a></li>
 							</ul>
 						</div>
 						<div class="image">
-							<img src="images/st_electrotwixt.jpg" alt="" />
+							<img src="images/st_electrotwixt.jpg" />
 						</div>
 					</section>     
 
-        <!-- Content Right -->
-					<section class="spotlight style1 invert color1 orient-right content-align-left image-position-left onscroll-image-fade-in" id="first">
+        <!-- While(True) -->
+					<section class="spotlight godot style1 invert color1 orient-right content-align-left image-position-left onscroll-image-fade-in">
 						<div class="content">
 							<h2>While(True)</h2>
-							<p>This project was my entry for the <a href="https://ldjam.com/" target="_blank" rel="noopener noreferrer">Ludum Dare 47</a> game jam, which happened in October 2020. This is a 2D side scrolling rage-platformer game which was made in about 5 hours total time due to several events outside the jam which I had to take care of. Made with <a href="https://godotengine.org/" target="_blank" rel="noopener noreferrer">Godot Engine</a></p>
-              <ul class="actions stacked">
-								<li><a href="https://rubixnoob13.itch.io/whiletrue/" target="_blank" rel="noopener noreferrer"" class="button">Play on Itch.io</a></li>
+							<p>This project was my entry for the <a href="https://ldjam.com" target="_blank" rel="noopener noreferrer">Ludum Dare 47</a> game jam, which happened in October 2020. This is a 2D side scrolling rage-platformer game which was made in about 5 hours total time due to several events outside the jam which I had to take care of. Made with <a href="https://godotengine.org" target="_blank" rel="noopener noreferrer">Godot Engine</a></p>
+              <ul class="actions">
+								<li><a href="https://rubixnoob13.itch.io/whiletrue" target="_blank" rel="noopener noreferrer" class="button">Play on Itch.io</a></li>
 							</ul>
 						</div>
 						<div class="image">
-							<img src="images/st_whiletrue.jpg" alt="" />
+							<img src="images/st_whiletrue.jpg" />
 						</div>
 					</section>    
 
-        <!-- Content Left -->
-					<section class="spotlight style1 invert color1 orient-left content-align-left image-position-center onscroll-image-fade-in" id="first">
+        <!-- Bringing Home the Bacon -->
+					<section class="spotlight godot style1 invert color1 orient-right content-align-left image-position-center onscroll-image-fade-in">
 						<div class="content">
 							<h2>Bringing Home the Bacon</h2>
-							<p>This project was my entry for the <a href="https://ldjam.com/" target="_blank" rel="noopener noreferrer">Ludum Dare 46</a> game jam, which happened in April 2020. This game is a single screen resource management style game made with <a href="https://godotengine.org/" target="_blank" rel="noopener noreferrer">Godot Engine</a>. The player must keep everything on the farm alive for 60 in-game days (1 hour in-game is approximately 6 seconds).</p>
+							<p>This project was my entry for the <a href="https://ldjam.com" target="_blank" rel="noopener noreferrer">Ludum Dare 46</a> game jam, which happened in April 2020. This game is a single screen resource management style game made with <a href="https://godotengine.org" target="_blank" rel="noopener noreferrer">Godot Engine</a>. The player must keep everything on the farm alive for 60 in-game days (1 hour in-game is approximately 6 seconds).</p>
               <p>The player must manage their energy while also gathering resources needed to feed a dragon and repair their farmhouse.</p>
-              <ul class="actions stacked">
-								<li><a href="https://rubixnoob13.itch.io/bringing-home-the-bacon/" target="_blank" rel="noopener noreferrer"" class="button">Play on Itch.io</a></li>
+              <ul class="actions">
+								<li><a href="https://rubixnoob13.itch.io/bringing-home-the-bacon" target="_blank" rel="noopener noreferrer" class="button">Play on Itch.io</a></li>
 							</ul>
 						</div>
 						<div class="image">
-							<img src="images/st_bacon.jpg" alt="" />
+							<img src="images/st_bacon.jpg" />
+						</div>
+					</section>
+        
+        <!-- Pi-Hole -->
+					<section class="spotlight resume style1 invert color1 orient-right content-align-left image-position-left onscroll-image-fade-in">
+						<div class="content">
+							<h2>Pi-Hole Network-Wide Ad blocker</h2>
+							<p>This project was made so that myself and my roommates would have some relief from the constant barrage of ads and pop-ups online.</p>
+              <p>The project consists of a Raspberry Pi 3 Model B+ running Pi-Hole software to detect and block ads, as well as act as the DNS server for my entire home network. More information and the full tutorial I followed for this project can be found <a href="https://learn.adafruit.com/pi-hole-ad-pitft-tft-detection-display?view=all" target="_blank" rel="noopener noreferrer">here</a>. 
+        		</div>
+						<div class="image">
+							<img src="images/st_pihole.jpg" />
 						</div>
 					</section>
 
-        <!-- Content Right -->
-					<section class="spotlight style1 invert color1 orient-right content-align-left image-position-left onscroll-image-fade-in" id="first">
+        <!-- Space Shipping -->
+					<section class="spotlight style1 invert color1 orient-right content-align-left image-position-left onscroll-image-fade-in">
 						<div class="content">
 							<h2>Space Shipping</h2>
-							<p>This project was my entry for the <a href="https://ldjam.com/" target="_blank" rel="noopener noreferrer">Ludum Dare 42</a> game jam, which happened in August 2018. This was my first game jam ever, and I made everything using <a href="https://gamemaker.io/en/gamemaker/" target="_blank" rel="noopener noreferrer">Gamemaker Studio</a>.</p>
+							<p>This project was my entry for the <a href="https://ldjam.com" target="_blank" rel="noopener noreferrer">Ludum Dare 42</a> game jam, which happened in August 2018. This was my first game jam ever, and I made everything using <a href="https://gamemaker.io/en/gamemaker" target="_blank" rel="noopener noreferrer">Gamemaker Studio</a>.</p>
               <p>This game includes elements of Tetris for manipulating the cargo as different shaped boxes, loading them onto your space ship, and delivering them to the destination.</p>
-              <ul class="actions stacked">
-								<li><a href="https://rubixnoob13.itch.io/space-shipping/" target="_blank" rel="noopener noreferrer"" class="button">Play on Itch.io</a></li>
+              <ul class="actions">
+								<li><a href="https://rubixnoob13.itch.io/space-shipping" target="_blank" rel="noopener noreferrer" class="button">Play on Itch.io</a></li>
 							</ul>
 						</div>
 						<div class="image">
-							<img src="images/st_spaceshipping.jpg" alt="" />
+							<img src="images/st_spaceshipping.jpg" />
 						</div>
 					</section>
 
-        <!-- Content Left -->
-					<section class="spotlight style1 invert color1 orient-left content-align-left image-position-center onscroll-image-fade-in" id="first">
+        <!-- Zombie Panic! Source -->
+					<section class="spotlight style1 invert color1 orient-right content-align-left image-position-center onscroll-image-fade-in">
 						<div class="content">
 							<h2>Zombie Panic! Source</h2>
 							<p>Between approximately February 2011 through late 2016 I did not have many programming projects, as I was working a full time job. However, in my free time I was hosting a sever for some friends to play a multiplayer first-person zombie apocalypse survival game called Zombie Panic! Source.</p>
-              <p>Unfortunately, other than just the few scripts and map files from the old server, it is no longer actively being hosted by myself</p>
-              <ul class="actions stacked">
-								<li><a href="https://store.steampowered.com/app/17500/Zombie_Panic_Source/" target="_blank" rel="noopener noreferrer"" class="button">View Game on Steam</a></li>
+              <p>Unfortunately, other than a few scripts and map files from the old server, I am no longer actively hosting a server at this time. The game itself still exists, and I do highly recommend it!</p>
+              <ul class="actions">
+								<li><a href="https://store.steampowered.com/app/17500/Zombie_Panic_Source" target="_blank" rel="noopener noreferrer" class="button">View Game on Steam</a></li>
 							</ul>
 						</div>
 						<div class="image">
-							<img src="images/st_zps.jpg" alt="" />
+							<img src="images/st_zps.jpg" />
 						</div>
 					</section>
 
-        <!-- Content Right -->
-					<section class="spotlight style1 invert color1 orient-right content-align-left image-position-left onscroll-image-fade-in" id="first">
+        <!-- Windows Police Pro Malware Remover -->
+					<section class="spotlight resume cpp style1 invert color1 orient-right content-align-left image-position-left onscroll-image-fade-in">
 						<div class="content">
 							<h2>Windows Police Pro Malware Remover</h2>
 							<p>This was a project which I made out of necessity around September 2009. My wife at the time had a PC which became infected with the Windows Police Pro malware.</p>
               <p>The malware was fairly new and caused a lot of problems, including making normal executable ".exe" files unable to run as normal. I wrote a few Windows batch file scripts and registry files ".reg", as well as some VBScript commands to help restore the system. There was a command line version as well as later a Windows GUI version of the program available. I also hosted a website which had several updates as I added new features and learned more about how to remove this malware.</p>
               <p>The website is not currently being hosted anymore as by now, most major antivirus programs easily detect and remove this malware, but at the time my program was downloaded a few hundred times and I even received a few donations from some people I was able to help to remove the malware from their systems. </p>
+              <ul class="actions">
+                <li><a href="https://github.com/steventid/portfolio/blob/main/CPP/WinPPRemover/WinPPRemover.cpp" target="_blank" rel="noopener noreferrer" class="button">Source on Github</a></li>
+              </ul>
 						</div>
 						<div class="image">
-							<img src="images/st_winppremover2.png" alt="" />
+							<img src="images/st_winppremover2.png" />
 						</div>
 					</section>          
 
 				<!-- Footer -->
 					<footer class="wrapper style1 invert color1 align-center">
 						<div class="inner">
-							<p>&copy; All Rights Reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+							<p>&copy; 2022 Steven Tidwell. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 						</div>
 					</footer>
 
