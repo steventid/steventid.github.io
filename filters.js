@@ -6,10 +6,10 @@ $(document).ready(function(){
   $("#vb6").click(function(){filter("vb6")});
   $("#cpp").click(function(){filter("cpp")});
   //organize project list when page loads to prettify left/right ordering
-  filter("spotlight");
+  filter("spotlight", false);
 });
 
-function filter(type) {
+function filter(type, scroll=true) {
   //hide all spotlights, show selected type
   $('.spotlight').hide();
   $('.'+type).show();
@@ -23,5 +23,11 @@ function filter(type) {
     } else {
       $(this).addClass("orient-left");
     }
+    
+    //scroll to content, include .stop(true, false) to keep animation from "sticking" once the scroll stops
+    if (scroll == true) {
+    $('html, body').stop(true, false).animate({
+      scrollTop: $("#content-start").offset().top});
+    } //end if scroll == true
   });
 }
