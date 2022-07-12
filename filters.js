@@ -5,6 +5,7 @@ $(document).ready(function(){
   $("#godot").click(function(){filter("godot")});
   $("#vb6").click(function(){filter("vb6")});
   $("#cpp").click(function(){filter("cpp")});
+  
   //organize project list when page loads to prettify left/right ordering
   filter("spotlight", false);
 });
