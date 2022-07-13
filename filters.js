@@ -16,6 +16,29 @@ window.addEventListener('message', function(e) {
   document.querySelector('#contact-frame').style.height = message.height + 'px';
 }, false);
 
+//make "back to top" button disappear when we're at the top
+$(window).scroll(function() {
+  //get window location
+  let scrollPos = $(document).scrollTop();
+  //get content tag top
+  let contentTop = $('#content-start').offset().top;
+
+  //if we scrolled past the content start, then fadein the button
+  if (scrollPos >= contentTop - 100) {
+    if (!$('#topbutton').is(':visible')) {
+      $('#topbutton').fadeIn();
+      //do a cute li'l bounce
+      $('#topbutton').animate({top: '1.5em'}, 50);
+      $('#topbutton').animate({top: '3.5em'}, 250);
+      $('#topbutton').animate({top: '2em'}, 400);
+    }
+  } else if (scrollPos < contentTop - 100) {
+    //we're back at the top, fade out
+    $('#topbutton').fadeOut();
+  }
+    
+});
+
 function filter(type='spotlight') {
   //hide all spotlights, show selected type
   $('.spotlight').hide();
