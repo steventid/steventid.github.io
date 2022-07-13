@@ -22,9 +22,6 @@ $(window).scroll(function() {
   let scrollPos = $(document).scrollTop();
   //get content tag top
   let contentTop = $('#content-start').offset().top;
-  
-  console.log(scrollPos + ' ' + contentTop);
-
   //if we scrolled past the content start, then fadein the button
   if (scrollPos >= contentTop - 100) {
     if (!$('#topbutton').is(':visible')) {
@@ -38,7 +35,7 @@ $(window).scroll(function() {
     //we're back at the top, fade out
     $('#topbutton').fadeOut();
   }
-    
+   
 });
 
 function filter(type='spotlight') {
