@@ -39,32 +39,33 @@ $(window).scroll(function() {
 });
 
 function filter(type='spotlight') {
-  //hide all spotlights, show selected type
-  $('.spotlight').hide();
-  $('.'+type).show();
-  
   //save the filter type to the session
   sessionStorage.setItem("filterName", type);
   
-  //dynamically make it alternate between left and right based on visibility
-  $('.spotlight:visible').each(function(i) {
-    //remove the side formatting
-    $(this).removeClass("orient-right orient-left");
-    //alternate which side text/images are on
-    if (i % 2 == 0) {
-      $(this).addClass("orient-right");
-    } else {
-      $(this).addClass("orient-left");
-    }
-  });
+  //hide all spotlights
+  $('.spotlight').fadeOut().promise().done(function() {
   
+    //dynamically alternate between left and right based on selected type
+    $('.'+type).each(function(i) {
+      //remove all side formatting
+      $(this).removeClass("orient-right orient-left");
+      //alternate which side text/images are on
+      if (i % 2 == 0) {
+        $(this).addClass("orient-right");
+      } else {
+        $(this).addClass("orient-left");
+      }
+      $(this).fadeIn();
+    });  
+  });
+   
   //set whether or not button is clicked
   $('.filter').each(function() {
-    //deselect all
-    $(this).removeClass('rubix_active');
     //select current filter
     if ($(this).attr('id') == type) {
       $(this).addClass('rubix_active');
+    } else {
+      $(this).removeClass('rubix_active');
     }
   });
 }
