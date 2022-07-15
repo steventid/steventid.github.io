@@ -42,18 +42,17 @@ function filter(type='spotlight') {
   //save the filter type to the session
   sessionStorage.setItem("filterName", type);
   
-  //hide all spotlights
+  //hide all spotlights, wait until hidden, then do the following
   $('.spotlight').fadeOut().promise().done(function() {
-  
     //dynamically alternate between left and right based on selected type
     $('.'+type).each(function(i) {
       //remove all side formatting
-      $(this).removeClass("orient-right orient-left");
+      $(this).removeClass('orient-right orient-left');
       //alternate which side text/images are on
       if (i % 2 == 0) {
-        $(this).addClass("orient-right");
+        $(this).addClass('orient-right');
       } else {
-        $(this).addClass("orient-left");
+        $(this).addClass('orient-left');
       }
       $(this).fadeIn();
     });  
