@@ -6,6 +6,7 @@ $(document).ready(function(){
   $('#vb6').click(function(){filter($(this).attr('id'));});
   $('#cpp').click(function(){filter($(this).attr('id'));});
   $('#bash').click(function(){filter($(this).attr('id'));});
+  $('#javascript').click(function(){filter($(this).attr('id'));});
   
   //organize project list when page loads to prettify left/right ordering
   filter(sessionStorage.getItem('filterName') ?? 'spotlight');
